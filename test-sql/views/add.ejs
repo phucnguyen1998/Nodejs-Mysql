@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <form action="add" method="post" role="form" enctype="multipart/form-data"> <!-- action gui len route add, -->
+                <legend>New Post</legend>
+                <div class="form-group">
+                    <label for="">ID</label>
+                    <input type="text" value="" name="id" class="form-control" id="id">
+                </div>
+                <div class="form-group">
+                    <label for="">Title</label>
+                    <input type="text" value="" name="title" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                    <label for="">Posts</label>
+                    <input type="text" name="post" value="" class="form-control" id="post">
+                </div>
+                <div class="form-group">
+                    <label for="">Image</label>
+                    <input type="file" name="uploadfile" class="form-control" id="image">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="check()">Post !</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function check(){
+        var id = document.getElementById("id").value;
+        var title = document.getElementById("title").value;
+        var post = document.getElementById("post").value;
+        if(id == "",title == "", post == ""){
+            alert("ko được để trống");
+            
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <form action="edit" method="post" enctype="multipart/form-data"> <!-- action gui len route edit, -->
+                <legend>Edit Post</legend>
+                <div class="form-group">
+                    <label for="">ID</label>
+                    <input type="text" name="id" class="form-control" id="id" value="<%= results.id %>"> 
+                </div>
+                <div class="form-group">
+                    <label for="">Title</label>
+                    <input type="text" name="title" class="form-control" id="title" value="<%= results.title %>">
+                </div>
+                <div class="form-group">
+                    <label for="">Posts</label>
+                    <input type="text" name="post" class="form-control" id="post" value="<%= results.posts %>">
+                </div>
+                <div class="d-flex">
+                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <label for="">Image</label>
+                        <img src="../upload/<%= results.image %>">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                        <label for="">New Image</label>
+                        <input type="file" name="uploadfile" class="form-control" id="image">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Edit !</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
